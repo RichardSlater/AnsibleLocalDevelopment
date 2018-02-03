@@ -1,0 +1,9 @@
+---
+- name: Setup Local Development
+  hosts: all
+  connection: local
+  become: true
+
+  tasks:
+    - name: upgrade all packages
+      yum: name=* state=latest
