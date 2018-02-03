@@ -5,5 +5,10 @@
   become: true
 
   tasks:
-    - name: upgrade all packages
+    - name: Upgrade All Packages
       yum: name=* state=latest
+
+    - name: Install Software
+      yum: pkg={{item}} state=installed
+      with_items:
+       - curl
