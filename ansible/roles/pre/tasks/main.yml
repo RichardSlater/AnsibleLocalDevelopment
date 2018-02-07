@@ -1,0 +1,9 @@
+---
+- name: Upgrade all packages
+  yum: name=* state=latest
+
+- name: Install prerequisites
+  yum: pkg={{item}} state=installed
+  with_items:
+   - curl
+   - java-1.8.0-openjdk

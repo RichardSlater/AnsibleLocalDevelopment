@@ -3,12 +3,7 @@
   hosts: all
   connection: local
   become: true
-
-  tasks:
-    - name: Upgrade All Packages
-      yum: name=* state=latest
-
-    - name: Install Software
-      yum: pkg={{item}} state=installed
-      with_items:
-       - curl
+  roles:
+    - pre
+    - main_role
+    - post

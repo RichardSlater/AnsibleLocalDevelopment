@@ -1,2 +1,2 @@
-- name: ansible-role-nginx
-  src: https://github.com/geerlingguy/ansible-role-nginx
+- name: ohtomi.jenkins2
+  src: ohtomi.jenkins2
